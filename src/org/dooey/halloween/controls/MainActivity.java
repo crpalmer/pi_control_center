@@ -3,7 +3,6 @@ package org.dooey.halloween.controls;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.view.Menu;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
@@ -47,12 +46,5 @@ public class MainActivity extends Activity {
 		spit = new RemoteButton(this, spitButton, spitterRemote, "spit");
 		final Button burpButton = (Button) findViewById(R.id.burp_button);
 		burp = new RemoteButton(this, burpButton, spitterRemote, "burp");
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
 	}
 }
