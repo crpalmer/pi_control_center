@@ -1,22 +1,15 @@
 package org.dooey.halloween.controls;
 
-import java.io.IOException;
-import java.net.UnknownHostException;
-
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.app.Activity;
-import android.util.Log;
 import android.view.Menu;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnTouchListener;
 import android.widget.Button;
-import android.widget.TabHost.OnTabChangeListener;
 
 public class MainActivity extends Activity {
-	private MomentaryButton spider;
-	private final Server server;
+	private RemoteButton spider, zombie, question, gater, snake;
+	private RemoteButton burp, spit;
+	private Remote animationStationRemote, spitterRemote;
 
 	public MainActivity() {
 		super();
@@ -24,16 +17,6 @@ public class MainActivity extends Activity {
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
 				.permitAll().build();
 		StrictMode.setThreadPolicy(policy);
-
-		try {
-			server = new Server("192.168.1.153", 5555);
-		} catch (UnknownHostException e) {
-			throw new RuntimeException("Couldn't connect to [" + "raspberrypi1"
-					+ "]", e);
-		} catch (IOException e) {
-			throw new RuntimeException("Couldn't connect to [" + "raspberrypi1"
-					+ "]", e);
-		}
 	}
 
 	@Override
@@ -41,10 +24,29 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		animationStationRemote = new Remote("pi4", 5555);
+		spitterRemote = new Remote("pi1", 5555);
+
 		final Button spiderButton = (Button) findViewById(R.id.spider_button);
-		spider = new MomentaryButton(server, "spider", spiderButton);
+		spider = new RemoteButton(this, spiderButton, animationStationRemote,
+				"spider");
 		final Button zombieButton = (Button) findViewById(R.id.zombie_button);
-		spider = new MomentaryButton(server, "zombie", zombieButton);
+		zombie = new RemoteButton(this, zombieButton, animationStationRemote,
+				"zombie");
+		final Button questionButton = (Button) findViewById(R.id.question_button);
+		question = new RemoteButton(this, questionButton,
+				animationStationRemote, "question");
+		final Button gaterButton = (Button) findViewById(R.id.gater_button);
+		gater = new RemoteButton(this, gaterButton, animationStationRemote,
+				"gater");
+		final Button snakeButton = (Button) findViewById(R.id.snake_button);
+		snake = new RemoteButton(this, snakeButton, animationStationRemote,
+				"snake");
+
+		final Button spitButton = (Button) findViewById(R.id.spit_button);
+		spit = new RemoteButton(this, spitButton, spitterRemote, "spit");
+		final Button burpButton = (Button) findViewById(R.id.burp_button);
+		burp = new RemoteButton(this, burpButton, spitterRemote, "burp");
 	}
 
 	@Override

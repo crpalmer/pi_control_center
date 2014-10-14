@@ -1,32 +1,116 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="32sp"
+        android:textColor="#ff0000"
+        android:text="Animation Station"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
         <Button
             android:id="@+id/spider_button"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
             android:paddingBottom="31dp"
             android:paddingTop="31dp"
+            android:layout_weight="1"
             android:text="Spider" />
 
         <Button
             android:id="@+id/zombie_button"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/spider_button"
-            android:layout_below="@+id/spider_button"
-            android:layout_marginTop="5dp"
             android:paddingBottom="31dp"
             android:paddingTop="31dp"
+            android:layout_weight="1"
             android:text="Zombie" />
-    
-</RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/question_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="31dp"
+            android:paddingTop="31dp"
+            android:layout_weight="1"
+            android:text="Question" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/gater_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="31dp"
+            android:paddingTop="31dp"
+            android:layout_weight="1"
+            android:text="Gater" />
+
+        <Button
+            android:id="@+id/snake_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="31dp"
+            android:paddingTop="31dp"
+            android:layout_weight="1"
+            android:text="Snake" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="32sp"
+        android:textColor="#ff0000"
+        android:text="Tobacco Spitter" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/spit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="31dp"
+            android:paddingTop="31dp"
+            android:layout_weight="1"
+            android:text="Spit" />
+
+        <Button
+            android:id="@+id/burp_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="31dp"
+            android:paddingTop="31dp"
+            android:layout_weight="1"
+            android:text="Burp" />
+    </LinearLayout>
+
+</LinearLayout>
