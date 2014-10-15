@@ -8,7 +8,8 @@ import android.widget.Button;
 public class MainActivity extends Activity {
 	private RemoteButton spider, zombie, question, gater, snake;
 	private RemoteButton burp, spit;
-	private Remote animationStationRemote, spitterRemote;
+	private RecordButton speak;
+	private Remote animationStationRemote, spitterRemote, voodooRemote;
 
 	public MainActivity() {
 		super();
@@ -25,6 +26,7 @@ public class MainActivity extends Activity {
 
 		animationStationRemote = new Remote("pi4", 5555);
 		spitterRemote = new Remote("pi1", 5555);
+		voodooRemote = new Remote("pi3", 5555);
 
 		final Button spiderButton = (Button) findViewById(R.id.spider_button);
 		spider = new RemoteButton(spiderButton, new RemotePublisher(this,
@@ -48,5 +50,9 @@ public class MainActivity extends Activity {
 		final Button burpButton = (Button) findViewById(R.id.burp_button);
 		burp = new RemoteButton(burpButton, new RemotePublisher(this,
 				spitterRemote, "burp"));
+
+		final Button speakButton = (Button) findViewById(R.id.speak_button);
+		speak = new RecordButton(speakButton, new RecordingWork(
+				new RemotePublisher(this, voodooRemote, "play")));
 	}
 }

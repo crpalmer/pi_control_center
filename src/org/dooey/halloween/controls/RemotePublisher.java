@@ -14,16 +14,22 @@ public class RemotePublisher implements EventPublisher {
 		this.command = command;
 	}
 
-	public void publish() {
+	@Override
+	public void publish(final byte[] blob) {
 		new Thread(new Runnable() {
 			public void run() {
 				try {
-					remote.command(command);
+					remote.command(command, blob);
 				} catch (RuntimeException e) {
 					activity.runOnUiThread(new MakeToast(e));
 				}
 			}
 		}).start();
+	}
+
+	@Override
+	public void publish() {
+		publish(null);
 	}
 
 	class MakeToast implements Runnable {

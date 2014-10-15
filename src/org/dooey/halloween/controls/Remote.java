@@ -1,9 +1,10 @@
 package org.dooey.halloween.controls;
 
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
@@ -19,18 +20,24 @@ public class Remote {
 		this.port = port;
 	}
 
-	public String command(String cmd) {
+	public String command(String cmd, byte[] blob) {
 		Socket socket = null;
-		PrintWriter out = null;
+		BufferedOutputStream out = null;
 		BufferedReader in = null;
 		try {
 			Log.d(TAG, "connect to " + host + ":" + port);
 			socket = new Socket(host, port);
-			out = new PrintWriter(socket.getOutputStream(), true);
+			out = new BufferedOutputStream(socket.getOutputStream());
 			in = new BufferedReader(new InputStreamReader(
 					socket.getInputStream()));
 			Log.d(TAG, "send to [" + host + ":" + port + "]: " + cmd);
-			out.println(cmd);
+			out.write(cmd.getBytes());
+			if (blob != null) {
+				out.write(' ');
+				printBlob(blob, out);
+			}
+			out.write('\n');
+			out.flush();
 			String response = in.readLine();
 			Log.d(TAG, "response: " + response);
 			if (!"ok".equals(response)) {
@@ -58,7 +65,11 @@ public class Remote {
 				}
 			}
 			if (out != null) {
-				out.close();
+				try {
+					out.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
 			if (in != null) {
 				try {
@@ -67,6 +78,31 @@ public class Remote {
 					e.printStackTrace();
 				}
 			}
+		}
+	}
+
+	public String command(String cmd) {
+		return command(cmd, null);
+	}
+
+	private void writeEscaped(char data, OutputStream os) throws IOException {
+		os.write('\\');
+		os.write(data);
+	}
+
+	private void printBlob(byte[] data, OutputStream os) throws IOException {
+
+		for (int i = 0; i < data.length; i++) {
+			if (data[i] == 0)
+				writeEscaped('0', os);
+			else if (data[i] == '\\')
+				writeEscaped('\\', os);
+			else if (data[i] == '\n')
+				writeEscaped('n', os);
+			else if (data[i] == '\r')
+				writeEscaped('r', os);
+			else
+				os.write(data[i]);
 		}
 	}
 }

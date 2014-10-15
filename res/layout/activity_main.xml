@@ -13,9 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textSize="32sp"
+        android:text="Animation Station"
         android:textColor="#ff0000"
-        android:text="Animation Station"/>
+        android:textSize="24sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,18 +26,18 @@
             android:id="@+id/spider_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="31dp"
-            android:paddingTop="31dp"
             android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
             android:text="Spider" />
 
         <Button
             android:id="@+id/zombie_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="31dp"
-            android:paddingTop="31dp"
             android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
             android:text="Zombie" />
     </LinearLayout>
 
@@ -50,9 +50,9 @@
             android:id="@+id/question_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="31dp"
-            android:paddingTop="31dp"
             android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
             android:text="Question" />
     </LinearLayout>
 
@@ -66,18 +66,18 @@
             android:id="@+id/gater_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="31dp"
-            android:paddingTop="31dp"
             android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
             android:text="Gater" />
 
         <Button
             android:id="@+id/snake_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="31dp"
-            android:paddingTop="31dp"
             android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
             android:text="Snake" />
     </LinearLayout>
 
@@ -85,9 +85,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textSize="32sp"
+        android:text="Tobacco Spitter"
         android:textColor="#ff0000"
-        android:text="Tobacco Spitter" />
+        android:textSize="24sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -98,19 +98,42 @@
             android:id="@+id/spit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="31dp"
-            android:paddingTop="31dp"
             android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
             android:text="Spit" />
 
         <Button
             android:id="@+id/burp_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="31dp"
-            android:paddingTop="31dp"
             android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
             android:text="Burp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Poppa Voodoo"
+        android:textColor="#ff0000"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/speak_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="Speak!" />
     </LinearLayout>
 
 </LinearLayout>
