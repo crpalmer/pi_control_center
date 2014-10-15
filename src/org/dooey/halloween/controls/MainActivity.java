@@ -27,24 +27,26 @@ public class MainActivity extends Activity {
 		spitterRemote = new Remote("pi1", 5555);
 
 		final Button spiderButton = (Button) findViewById(R.id.spider_button);
-		spider = new RemoteButton(this, spiderButton, animationStationRemote,
-				"spider");
+		spider = new RemoteButton(spiderButton, new RemotePublisher(this,
+				animationStationRemote, "spider"));
 		final Button zombieButton = (Button) findViewById(R.id.zombie_button);
-		zombie = new RemoteButton(this, zombieButton, animationStationRemote,
-				"zombie");
+		zombie = new RemoteButton(zombieButton, new RemotePublisher(this,
+				animationStationRemote, "zombie"));
 		final Button questionButton = (Button) findViewById(R.id.question_button);
-		question = new RemoteButton(this, questionButton,
-				animationStationRemote, "question");
+		question = new RemoteButton(questionButton, new RemotePublisher(this,
+				animationStationRemote, "question"));
 		final Button gaterButton = (Button) findViewById(R.id.gater_button);
-		gater = new RemoteButton(this, gaterButton, animationStationRemote,
-				"gater");
+		gater = new RemoteButton(gaterButton, new RemotePublisher(this,
+				animationStationRemote, "gater"));
 		final Button snakeButton = (Button) findViewById(R.id.snake_button);
-		snake = new RemoteButton(this, snakeButton, animationStationRemote,
-				"snake");
+		snake = new RemoteButton(snakeButton, new RemotePublisher(this,
+				animationStationRemote, "snake"));
 
 		final Button spitButton = (Button) findViewById(R.id.spit_button);
-		spit = new RemoteButton(this, spitButton, spitterRemote, "spit");
+		spit = new RemoteButton(spitButton, new RemotePublisher(this,
+				spitterRemote, "spit"));
 		final Button burpButton = (Button) findViewById(R.id.burp_button);
-		burp = new RemoteButton(this, burpButton, spitterRemote, "burp");
+		burp = new RemoteButton(burpButton, new RemotePublisher(this,
+				spitterRemote, "burp"));
 	}
 }
