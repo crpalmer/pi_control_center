@@ -133,7 +133,7 @@
             android:layout_weight="1"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Speak!" />
+            android:text="Speak: Push and hold" />
     </LinearLayout>
 
 </LinearLayout>

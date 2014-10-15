@@ -8,8 +8,8 @@ import android.widget.Button;
 
 public class RecordButton implements OnTouchListener {
 	private static final String TAG = "RecordButton";
+	private static final int BACKGROUND_OFF = 0xff00ff00;
 	private static final int BACKGROUND_ON = 0xffff0000;
-	private static final int BACKGROUND_OFF = 0xffaaaaaa;
 
 	private final Button button;
 	private MomentaryWork work;
