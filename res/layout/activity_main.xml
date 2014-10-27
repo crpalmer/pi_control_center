@@ -15,7 +15,7 @@
         android:layout_weight="1"
         android:text="Animation Station"
         android:textColor="#ff0000"
-        android:textSize="24sp" />
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -87,7 +87,7 @@
         android:layout_weight="1"
         android:text="Tobacco Spitter"
         android:textColor="#ff0000"
-        android:textSize="24sp" />
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -117,9 +117,50 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:text="Swamp"
+        android:textColor="#ff0000"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/less_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="Less" />
+
+        <Button
+            android:id="@+id/fog_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="Burst" />
+
+        <Button
+            android:id="@+id/more_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="More" />
+        </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:text="Poppa Voodoo"
         android:textColor="#ff0000"
-        android:textSize="24sp" />
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"

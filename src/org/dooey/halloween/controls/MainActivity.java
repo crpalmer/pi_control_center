@@ -8,8 +8,10 @@ import android.widget.Button;
 public class MainActivity extends Activity {
 	private RemoteButton spider, zombie, question, gater, snake;
 	private RemoteButton burp, spit;
+	private RemoteButton less, more, burst;
 	private RecordButton speak;
-	private Remote animationStationRemote, spitterRemote, voodooRemote;
+	private Remote animationStationRemote, spitterRemote, swampRemote,
+			voodooRemote;
 
 	public MainActivity() {
 		super();
@@ -26,6 +28,7 @@ public class MainActivity extends Activity {
 
 		animationStationRemote = new Remote("pi4", 5555);
 		spitterRemote = new Remote("pi1", 5555);
+		swampRemote = new Remote("192.168.1.169", 5555);
 		voodooRemote = new Remote("pi3", 5555);
 
 		final Button spiderButton = (Button) findViewById(R.id.spider_button);
@@ -50,6 +53,16 @@ public class MainActivity extends Activity {
 		final Button burpButton = (Button) findViewById(R.id.burp_button);
 		burp = new RemoteButton(burpButton, new RemotePublisher(this,
 				spitterRemote, "burp"));
+
+		final Button lessButton = (Button) findViewById(R.id.less_button);
+		less = new RemoteButton(lessButton, new RemotePublisher(this,
+				swampRemote, "duty_down"));
+		final Button fogButton = (Button) findViewById(R.id.fog_button);
+		burst = new RemoteButton(fogButton, new RemotePublisher(this,
+				swampRemote, "fog"));
+		final Button moreButton = (Button) findViewById(R.id.more_button);
+		more = new RemoteButton(moreButton, new RemotePublisher(this,
+				swampRemote, "duty_up"));
 
 		final Button speakButton = (Button) findViewById(R.id.speak_button);
 		speak = new RecordButton(speakButton, new RecordingWork(
