@@ -40,12 +40,18 @@ public class Remote {
 			out.flush();
 			String response = in.readLine();
 			Log.d(TAG, "response: " + response);
+
+			if (response != null && response.startsWith("ok ")) {
+				return response.substring(3);
+			}
+
 			if (!"ok".equals(response)) {
 				String message = "Command \"" + cmd + "\" failed: " + response;
 				Log.d(TAG, message);
 				throw new RuntimeException(message);
 			}
-			return response;
+
+			return null;
 		} catch (UnknownHostException e) {
 			String message = "Couldn't connect to [" + host + ":" + port
 					+ "]: " + e.getLocalizedMessage();

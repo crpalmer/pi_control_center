@@ -33,39 +33,39 @@ public class MainActivity extends Activity {
 
 		final Button spiderButton = (Button) findViewById(R.id.spider_button);
 		spider = new RemoteButton(spiderButton, new RemotePublisher(this,
-				animationStationRemote, "spider"));
+				spiderButton, animationStationRemote, "spider"));
 		final Button zombieButton = (Button) findViewById(R.id.zombie_button);
 		zombie = new RemoteButton(zombieButton, new RemotePublisher(this,
-				animationStationRemote, "zombie"));
+				zombieButton, animationStationRemote, "zombie"));
 		final Button questionButton = (Button) findViewById(R.id.question_button);
 		question = new RemoteButton(questionButton, new RemotePublisher(this,
-				animationStationRemote, "question"));
+				questionButton, animationStationRemote, "question"));
 		final Button gaterButton = (Button) findViewById(R.id.gater_button);
 		gater = new RemoteButton(gaterButton, new RemotePublisher(this,
-				animationStationRemote, "gater"));
+				gaterButton, animationStationRemote, "gater"));
 		final Button snakeButton = (Button) findViewById(R.id.snake_button);
 		snake = new RemoteButton(snakeButton, new RemotePublisher(this,
-				animationStationRemote, "snake"));
+				snakeButton, animationStationRemote, "snake"));
 
 		final Button spitButton = (Button) findViewById(R.id.spit_button);
 		spit = new RemoteButton(spitButton, new RemotePublisher(this,
-				spitterRemote, "spit"));
+				spitButton, spitterRemote, "spit"));
 		final Button burpButton = (Button) findViewById(R.id.burp_button);
 		burp = new RemoteButton(burpButton, new RemotePublisher(this,
-				spitterRemote, "burp"));
+				burpButton, spitterRemote, "burp"));
 
 		final Button lessButton = (Button) findViewById(R.id.less_button);
 		less = new RemoteButton(lessButton, new RemotePublisher(this,
-				swampRemote, "duty_down"));
+				lessButton, swampRemote, "duty_down"));
 		final Button fogButton = (Button) findViewById(R.id.fog_button);
 		burst = new RemoteButton(fogButton, new RemotePublisher(this,
-				swampRemote, "fog"));
+				fogButton, swampRemote, "fog"));
 		final Button moreButton = (Button) findViewById(R.id.more_button);
 		more = new RemoteButton(moreButton, new RemotePublisher(this,
-				swampRemote, "duty_up"));
+				moreButton, swampRemote, "duty_up"));
 
 		final Button speakButton = (Button) findViewById(R.id.speak_button);
 		speak = new RecordButton(speakButton, new RecordingWork(
-				new RemotePublisher(this, voodooRemote, "play")));
+				new RemotePublisher(this, speakButton, voodooRemote, "play")));
 	}
 }
