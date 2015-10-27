@@ -1,2 +1,5 @@
 *.o
 *.d
+gen
+out
+.idea
