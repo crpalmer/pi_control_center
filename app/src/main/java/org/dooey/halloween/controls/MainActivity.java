@@ -3,6 +3,7 @@ package org.dooey.halloween.controls;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.util.Log;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
@@ -11,7 +12,12 @@ public class MainActivity extends Activity {
 	private RemoteButton less, more, burst;
 	private RecordButton speak;
 	private Remote animationStationRemote, eelRemote, foggerRemote,
-			voodooRemote;
+			talkerRemote;
+
+    private static final String BUTTON1 = "gater";
+    private static final String BUTTON2 = "frog";
+    private static final String BUTTON4 = "mermaid";
+    private static final String BUTTON5 = "snake";
 
 	public MainActivity() {
 		super();
@@ -26,30 +32,24 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		animationStationRemote = new Remote("pi3", 5555);
-		eelRemote = new Remote("pi3", 5555);
-		foggerRemote = new Remote("192.168.1.169", 5555);
-		voodooRemote = new Remote("pi3", 5555);
+        animationStationRemote = new Remote("animation-station", 5555);
+        foggerRemote = new Remote("animation-station", 5556);
 
-		final Button octoButton = (Button) findViewById(R.id.octo_button);
-		spider = new RemoteButton(octoButton, new RemotePublisher(this,
-				octoButton, animationStationRemote, "octo"));
-		final Button squidButton = (Button) findViewById(R.id.squid_button);
-		zombie = new RemoteButton(squidButton, new RemotePublisher(this,
-				squidButton, animationStationRemote, "squid"));
+		final Button button1 = (Button) findViewById(R.id.button1);
+		spider = new RemoteButton(button1, new RemotePublisher(this,
+				button1, animationStationRemote, BUTTON1));
+		final Button button2 = (Button) findViewById(R.id.button2);
+		zombie = new RemoteButton(button2, new RemotePublisher(this,
+				button2, animationStationRemote, BUTTON2));
 		final Button questionButton = (Button) findViewById(R.id.question_button);
 		question = new RemoteButton(questionButton, new RemotePublisher(this,
 				questionButton, animationStationRemote, "question"));
-		final Button unknownButton = (Button) findViewById(R.id.unknown_button);
-		gater = new RemoteButton(unknownButton, new RemotePublisher(this,
-				unknownButton, animationStationRemote, "???"));
-		final Button cudaButton = (Button) findViewById(R.id.cuda_button);
-		snake = new RemoteButton(cudaButton, new RemotePublisher(this,
-				cudaButton, animationStationRemote, "cuda"));
-
-		final Button eelButton = (Button) findViewById(R.id.eel_button);
-		spit = new RemoteButton(eelButton, new RemotePublisher(this,
-				eelButton, eelRemote, "eel"));
+		final Button button4 = (Button) findViewById(R.id.button4);
+		gater = new RemoteButton(button4, new RemotePublisher(this,
+				button4, animationStationRemote, BUTTON4));
+		final Button button5 = (Button) findViewById(R.id.button5);
+		snake = new RemoteButton(button5, new RemotePublisher(this,
+				button5, animationStationRemote, BUTTON5));
 
 		final Button lessButton = (Button) findViewById(R.id.less_button);
 		less = new RemoteButton(lessButton, new RemotePublisher(this,
@@ -63,6 +63,6 @@ public class MainActivity extends Activity {
 
 		final Button speakButton = (Button) findViewById(R.id.speak_button);
 		speak = new RecordButton(speakButton, new RecordingWork(
-				new RemotePublisher(this, speakButton, voodooRemote, "play")));
+				new RemotePublisher(this, speakButton, talkerRemote, "play")));
 	}
 }

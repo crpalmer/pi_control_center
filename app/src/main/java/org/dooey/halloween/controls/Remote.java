@@ -25,7 +25,7 @@ public class Remote {
 		BufferedOutputStream out = null;
 		BufferedReader in = null;
 		try {
-			Log.d(TAG, "connect to " + host + ":" + port);
+			Log.e(TAG, "connect to " + host + ":" + port);
 			socket = new Socket(host, port);
 			out = new BufferedOutputStream(socket.getOutputStream());
 			in = new BufferedReader(new InputStreamReader(

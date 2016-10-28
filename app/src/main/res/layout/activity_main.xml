@@ -23,22 +23,22 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/octo_button"
+            android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Octo Log" />
+            android:text="Gater" />
 
         <Button
-            android:id="@+id/squid_button"
+            android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Squid" />
+            android:text="Frog Log" />
     </LinearLayout>
 
     <LinearLayout
@@ -63,52 +63,36 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/unknown_button"
+            android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Unknown" />
+            android:text="Mermaid" />
 
         <Button
-            android:id="@+id/cuda_button"
+            android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Barracuda" />
+            android:text="Snake" />
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Eel"
-        android:textColor="#ff0000"
-        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <Button
-            android:id="@+id/eel_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:text="Go" />
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Fog Machine"
+        android:text="Dragon Fog"
         android:textColor="#ff0000"
         android:textSize="18sp" />
 
