@@ -14,10 +14,10 @@ public class MainActivity extends Activity {
 	private Remote animationStationRemote, eelRemote, foggerRemote,
 			talkerRemote;
 
-    private static final String BUTTON1 = "gater";
+    private static final String BUTTON1 = "snake";
     private static final String BUTTON2 = "frog";
-    private static final String BUTTON4 = "mermaid";
-    private static final String BUTTON5 = "snake";
+    private static final String BUTTON4 = "gater";
+    private static final String BUTTON5 = "spider";
 
 	public MainActivity() {
 		super();
@@ -34,6 +34,7 @@ public class MainActivity extends Activity {
 
         animationStationRemote = new Remote("animation-station", 5555);
         foggerRemote = new Remote("animation-station", 5556);
+        talkerRemote = new Remote("talker", 5555);
 
 		final Button button1 = (Button) findViewById(R.id.button1);
 		spider = new RemoteButton(button1, new RemotePublisher(this,
@@ -51,7 +52,11 @@ public class MainActivity extends Activity {
 		snake = new RemoteButton(button5, new RemotePublisher(this,
 				button5, animationStationRemote, BUTTON5));
 
-		final Button lessButton = (Button) findViewById(R.id.less_button);
+        final Button mermaidButton = (Button) findViewById(R.id.mermaid);
+        snake = new RemoteButton(mermaidButton, new RemotePublisher(this,
+                button5, animationStationRemote, "mermaid"));
+
+        final Button lessButton = (Button) findViewById(R.id.less_button);
 		less = new RemoteButton(lessButton, new RemotePublisher(this,
 				lessButton, foggerRemote, "duty_down"));
 		final Button fogButton = (Button) findViewById(R.id.fog_button);
