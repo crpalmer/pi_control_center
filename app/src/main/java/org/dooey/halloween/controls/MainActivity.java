@@ -7,17 +7,17 @@ import android.util.Log;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
-	private RemoteButton spider, zombie, question, gater, snake;
-	private RemoteButton burp, spit;
+	private RemoteButton ghost_dog, frog_log, question, snake, cat;
+	private RemoteButton mr_hop;
 	private RemoteButton less, more, burst;
 	private RecordButton speak;
-	private Remote animationStationRemote, eelRemote, foggerRemote,
+	private Remote animationStationRemote, mrHopRemove, foggerRemote,
 			talkerRemote;
 
-    private static final String BUTTON1 = "snake";
+    private static final String BUTTON1 = "ghost-dog";
     private static final String BUTTON2 = "frog";
-    private static final String BUTTON4 = "gater";
-    private static final String BUTTON5 = "spider";
+    private static final String BUTTON4 = "snake";
+    private static final String BUTTON5 = "cat";
 
 	public MainActivity() {
 		super();
@@ -33,28 +33,28 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 
         animationStationRemote = new Remote("animation-station", 5555);
-        foggerRemote = new Remote("animation-station", 5556);
+        foggerRemote = new Remote("coffin", 5556);
         talkerRemote = new Remote("talker", 5555);
 
 		final Button button1 = (Button) findViewById(R.id.button1);
-		spider = new RemoteButton(button1, new RemotePublisher(this,
+		ghost_dog = new RemoteButton(button1, new RemotePublisher(this,
 				button1, animationStationRemote, BUTTON1));
 		final Button button2 = (Button) findViewById(R.id.button2);
-		zombie = new RemoteButton(button2, new RemotePublisher(this,
+		frog_log = new RemoteButton(button2, new RemotePublisher(this,
 				button2, animationStationRemote, BUTTON2));
 		final Button questionButton = (Button) findViewById(R.id.question_button);
 		question = new RemoteButton(questionButton, new RemotePublisher(this,
 				questionButton, animationStationRemote, "question"));
 		final Button button4 = (Button) findViewById(R.id.button4);
-		gater = new RemoteButton(button4, new RemotePublisher(this,
+		snake = new RemoteButton(button4, new RemotePublisher(this,
 				button4, animationStationRemote, BUTTON4));
 		final Button button5 = (Button) findViewById(R.id.button5);
-		snake = new RemoteButton(button5, new RemotePublisher(this,
+		cat = new RemoteButton(button5, new RemotePublisher(this,
 				button5, animationStationRemote, BUTTON5));
 
-        final Button mermaidButton = (Button) findViewById(R.id.mermaid);
-        snake = new RemoteButton(mermaidButton, new RemotePublisher(this,
-                button5, animationStationRemote, "mermaid"));
+        final Button mrHopButton = (Button) findViewById(R.id.mr_hop);
+        mr_hop = new RemoteButton(mrHopButton, new RemotePublisher(this,
+                mrHopButton, animationStationRemote, "mr-hop"));
 
         final Button lessButton = (Button) findViewById(R.id.less_button);
 		less = new RemoteButton(lessButton, new RemotePublisher(this,

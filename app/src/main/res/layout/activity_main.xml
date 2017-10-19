@@ -29,7 +29,7 @@
             android:layout_weight="1"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Snake" />
+            android:text="Ghost Dog" />
 
         <Button
             android:id="@+id/button2"
@@ -69,7 +69,7 @@
             android:layout_weight="1"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Gater" />
+            android:text="Snake" />
 
         <Button
             android:id="@+id/button5"
@@ -78,7 +78,7 @@
             android:layout_weight="1"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Spider" />
+            android:text="Cat" />
     </LinearLayout>
 
     <LinearLayout
@@ -88,13 +88,13 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/mermaid"
+            android:id="@+id/mr_hop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Mermaid" />
+            android:text="Mr. Hop" />
     </LinearLayout>
 
 
@@ -109,7 +109,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Dragon Fog"
+        android:text="Coffin Fog"
         android:textColor="#ff0000"
         android:textSize="18sp" />
 
