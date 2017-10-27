@@ -11,13 +11,13 @@ public class MainActivity extends Activity {
 	private RemoteButton mr_hop;
 	private RemoteButton less, more, burst;
 	private RecordButton speak;
-	private Remote animationStationRemote, mrHopRemove, foggerRemote,
+	private Remote animationStationRemote, animationStation2Remote, foggerRemote,
 			talkerRemote;
 
-    private static final String BUTTON1 = "ghost-dog";
-    private static final String BUTTON2 = "frog";
-    private static final String BUTTON4 = "snake";
-    private static final String BUTTON5 = "cat";
+    private static final String BUTTON1 = "dog";
+    private static final String BUTTON2 = "cat";
+    private static final String BUTTON4 = "toad";
+    private static final String BUTTON5 = "snake";
 
 	public MainActivity() {
 		super();
@@ -32,7 +32,8 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-        animationStationRemote = new Remote("animation-station", 5555);
+		animationStationRemote = new Remote("animation-station", 5555);
+		animationStation2Remote = new Remote("animation-station2", 5555);
         foggerRemote = new Remote("coffin", 5556);
         talkerRemote = new Remote("talker", 5555);
 
@@ -52,11 +53,15 @@ public class MainActivity extends Activity {
 		cat = new RemoteButton(button5, new RemotePublisher(this,
 				button5, animationStationRemote, BUTTON5));
 
-        final Button mrHopButton = (Button) findViewById(R.id.mr_hop);
-        mr_hop = new RemoteButton(mrHopButton, new RemotePublisher(this,
-                mrHopButton, animationStationRemote, "mr-hop"));
+		final Button frogLogButton = (Button) findViewById(R.id.frog);
+		mr_hop = new RemoteButton(frogLogButton, new RemotePublisher(this,
+				frogLogButton, animationStation2Remote, "frog"));
 
-        final Button lessButton = (Button) findViewById(R.id.less_button);
+		final Button mrHopButton = (Button) findViewById(R.id.mr_hop);
+		mr_hop = new RemoteButton(mrHopButton, new RemotePublisher(this,
+				mrHopButton, animationStation2Remote, "hop"));
+
+		final Button lessButton = (Button) findViewById(R.id.less_button);
 		less = new RemoteButton(lessButton, new RemotePublisher(this,
 				lessButton, foggerRemote, "duty_down"));
 		final Button fogButton = (Button) findViewById(R.id.fog_button);
