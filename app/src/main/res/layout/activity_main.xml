@@ -69,7 +69,7 @@
             android:layout_weight="1"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Intestines" />
+            android:text="Frog Octopus" />
 
         <Button
             android:id="@+id/button5"
@@ -78,7 +78,7 @@
             android:layout_weight="1"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Snake" />
+            android:text="Intestines" />
     </LinearLayout>
 
     <LinearLayout
@@ -88,32 +88,49 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/frog"
+            android:id="@+id/scow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Frog Log" />
-
-        <Button
-            android:id="@+id/mr_hop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:text="Mr. Hop" />
+            android:text="Scow" />
     </LinearLayout>
 
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Coffin Fog"
-        android:textColor="#ff0000"
-        android:textSize="18sp" />
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/mm1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="MM 1" />
+
+        <Button
+            android:id="@+id/high_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="Reset HS" />
+
+        <Button
+            android:id="@+id/mm2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="MM 2" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -148,7 +165,7 @@
             android:text="More" />
         </LinearLayout>
 
-    <TextView
+    <TextView android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
