@@ -29,7 +29,7 @@
             android:layout_weight="1"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Ghost Dog" />
+            android:text="Chicken" />
 
         <Button
             android:id="@+id/button2"
@@ -38,7 +38,7 @@
             android:layout_weight="1"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Cat" />
+            android:text="Squid" />
     </LinearLayout>
 
     <LinearLayout
@@ -69,7 +69,7 @@
             android:layout_weight="1"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Toad" />
+            android:text="Intestines" />
 
         <Button
             android:id="@+id/button5"
