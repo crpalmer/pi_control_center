@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "28.0.3"
+    compileSdkVersion 30
 
     defaultConfig {
         applicationId "org.dooey.halloween.controls"
         minSdkVersion 9
-        targetSdkVersion 18
+        targetSdkVersion 30
     }
 
     buildTypes {

@@ -98,17 +98,17 @@ public class Remote {
 
 	private void printBlob(byte[] data, OutputStream os) throws IOException {
 
-		for (int i = 0; i < data.length; i++) {
-			if (data[i] == 0)
+		for (byte datum : data) {
+			if (datum == 0)
 				writeEscaped('0', os);
-			else if (data[i] == '\\')
+			else if (datum == '\\')
 				writeEscaped('\\', os);
-			else if (data[i] == '\n')
+			else if (datum == '\n')
 				writeEscaped('n', os);
-			else if (data[i] == '\r')
+			else if (datum == '\r')
 				writeEscaped('r', os);
 			else
-				os.write(data[i]);
+				os.write(datum);
 		}
 	}
 }
