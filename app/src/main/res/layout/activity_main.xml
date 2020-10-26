@@ -27,18 +27,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Chicken" />
+            android:paddingBottom="20dp"
+            android:text="Candy Corn" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Squid" />
+            android:paddingBottom="20dp"
+            android:text="Pop Tots" />
     </LinearLayout>
 
     <LinearLayout
@@ -47,13 +54,14 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/question_button"
+            android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Question" />
+            android:paddingBottom="20dp"
+            android:text="Twizzler" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -67,69 +75,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="Frog Octopus" />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:text="Intestines" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/scow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:text="Scow" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/mm1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:text="MM 1" />
-
-        <Button
-            android:id="@+id/high_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:text="Reset HS" />
-
-        <Button
-            android:id="@+id/mm2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:text="MM 2" />
-
+            android:text="Kit Kat" />
     </LinearLayout>
 
     <LinearLayout

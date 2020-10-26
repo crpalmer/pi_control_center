@@ -6,6 +6,8 @@ import android.os.StrictMode;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
+	RemoteButton candy_corn, pop_tots, twizzler, kit_kat;
+
 	public MainActivity() {
 		super();
 
@@ -14,9 +16,9 @@ public class MainActivity extends Activity {
 		StrictMode.setThreadPolicy(policy);
 	}
 
-	private void createPropAction(Remote remote, int buttonId, String command) {
+	private RemoteButton createPropAction(Remote remote, int buttonId, String command) {
 		final Button button = findViewById(buttonId);
-		RemoteButton remoteButton = new RemoteButton(button, new RemotePublisher(this,
+		return new RemoteButton(button, new RemotePublisher(this,
 				button, remote, command));
 	}
 
@@ -25,14 +27,14 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		Remote animationStationRemote = new Remote("animation-station.dooey.org", 5555);
+		Remote animationStationRemote = new Remote("covid-station.dooey.org", 5555);
 		Remote foggerRemote = new Remote("fogger.dooey.org", 5555);
 		Remote talkerRemote = new Remote("talker.dooey.org", 5555);
 
-		createPropAction(animationStationRemote, R.id.button1, "candy corn");
-		createPropAction(animationStationRemote, R.id.button1, "pop tots");
-		createPropAction(animationStationRemote, R.id.button1, "twizzler");
-		createPropAction(animationStationRemote, R.id.button1, "kitkat");
+		candy_corn = createPropAction(animationStationRemote, R.id.button1, "candy corn");
+		pop_tots = createPropAction(animationStationRemote, R.id.button2, "pop tots");
+		twizzler = createPropAction(animationStationRemote, R.id.button3, "twizzler");
+		kit_kat = createPropAction(animationStationRemote, R.id.button4, "kit kat");
 		createPropAction(foggerRemote, R.id.fog_button, "fog");
 		createPropAction(foggerRemote, R.id.more_button, "duty_up");
 		createPropAction(foggerRemote, R.id.less_button, "duty_down");
