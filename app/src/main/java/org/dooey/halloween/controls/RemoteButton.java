@@ -5,7 +5,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class RemoteButton implements OnClickListener {
-	private EventPublisher publisher;
+	private final EventPublisher publisher;
 
 	public RemoteButton(Button button, EventPublisher publisher) {
 		this.publisher = publisher;

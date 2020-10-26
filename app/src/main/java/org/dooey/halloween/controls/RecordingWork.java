@@ -12,7 +12,7 @@ public class RecordingWork implements MomentaryWork {
 	private final static String TAG = "RecordingWork";
 	private static final int SAMPLING_RATE = 16000;
 
-	private AtomicBoolean stopRecording = new AtomicBoolean();
+	private final AtomicBoolean stopRecording = new AtomicBoolean();
 
 	private final EventPublisher publisher;
 

@@ -12,7 +12,7 @@ public class RecordButton implements OnTouchListener {
 	private static final int BACKGROUND_ON = 0xffff0000;
 
 	private final Button button;
-	private MomentaryWork work;
+	private final MomentaryWork work;
 
 	public RecordButton(Button button, MomentaryWork work) {
 		this.work = work;
