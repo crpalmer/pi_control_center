@@ -1,26 +1,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:gravity="center"
         android:text="Animation Station"
-        android:textColor="#ff0000"
-        android:textSize="18sp" />
+        android:textColor="#ED0F0F"
+        android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button1"
@@ -29,7 +30,7 @@
             android:layout_weight="1"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:text="Candy Corn" />
+            android:text="Snake" />
 
     </LinearLayout>
 
@@ -45,13 +46,13 @@
             android:layout_weight="1"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:text="Pop Tots" />
+            android:text="Cauldron" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button3"
@@ -60,7 +61,7 @@
             android:layout_weight="1"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:text="Twizzler" />
+            android:text="M and M" />
 
     </LinearLayout>
 
@@ -68,7 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button4"
@@ -77,21 +78,30 @@
             android:layout_weight="1"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:text="Kit Kat" />
+            android:text="Demono Sugar" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Fogger"
+        android:textColor="#ED0F0F"
+        android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/less_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingBottom="20dp"
             android:paddingTop="20dp"
+            android:paddingBottom="20dp"
             android:text="Less" />
 
         <Button
@@ -99,8 +109,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingBottom="20dp"
             android:paddingTop="20dp"
+            android:paddingBottom="20dp"
             android:text="Burst" />
 
         <Button
@@ -108,31 +118,57 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingBottom="20dp"
             android:paddingTop="20dp"
+            android:paddingBottom="20dp"
             android:text="More" />
-        </LinearLayout>
+    </LinearLayout>
 
-    <TextView android:visibility="gone"
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Talker"
-        android:textColor="#ff0000"
-        android:textSize="18sp" />
+        android:gravity="center"
+        android:text="Band"
+        android:textColor="#ed0f0f"
+        android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/band"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="Sing!" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Talker"
+        android:textColor="#ed0f0f"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/speak_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingBottom="20dp"
             android:paddingTop="20dp"
+            android:paddingBottom="20dp"
             android:text="Speak: Push and hold" />
     </LinearLayout>
 

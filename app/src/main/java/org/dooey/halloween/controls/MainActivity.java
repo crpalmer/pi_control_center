@@ -6,8 +6,6 @@ import android.os.StrictMode;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
-	RemoteButton candy_corn, pop_tots, twizzler, kit_kat;
-
 	public MainActivity() {
 		super();
 
@@ -27,17 +25,19 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		Remote animationStationRemote = new Remote("covid-station.dooey.org", 5555);
-		Remote foggerRemote = new Remote("fogger.dooey.org", 5555);
+		Remote animationStationRemote = new Remote("animation-station.dooey.org", 5555);
+		Remote bandRemote = new Remote("band.dooey.org", 5555);
+		Remote foggerRemote = new Remote("talker.dooey.org", 5556);
 		Remote talkerRemote = new Remote("talker.dooey.org", 5555);
 
-		candy_corn = createPropAction(animationStationRemote, R.id.button1, "candy corn");
-		pop_tots = createPropAction(animationStationRemote, R.id.button2, "pop tots");
-		twizzler = createPropAction(animationStationRemote, R.id.button3, "twizzler");
-		kit_kat = createPropAction(animationStationRemote, R.id.button4, "kit kat");
+		createPropAction(animationStationRemote, R.id.button1, "snake");
+		createPropAction(animationStationRemote, R.id.button2, "bunny");
+		createPropAction(animationStationRemote, R.id.button3, "M&M");
+		createPropAction(animationStationRemote, R.id.button4, "demono");
 		createPropAction(foggerRemote, R.id.fog_button, "fog");
 		createPropAction(foggerRemote, R.id.more_button, "duty_up");
 		createPropAction(foggerRemote, R.id.less_button, "duty_down");
+		createPropAction(bandRemote, R.id.band, "play");
 
 		final Button speakButton = findViewById(R.id.speak_button);
 		new RecordButton(speakButton, new RecordingWork(
