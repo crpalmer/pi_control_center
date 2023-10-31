@@ -30,10 +30,10 @@ public class MainActivity extends Activity {
 		//Remote foggerRemote = new Remote("talker.dooey.org", 5556);
 		//Remote talkerRemote = new Remote("talker.dooey.org", 5555);
 
-		createPropAction(animationStationRemote, R.id.button1, "mosquito");
+		createPropAction(animationStationRemote, R.id.button1, "bunny");
 		createPropAction(animationStationRemote, R.id.button2, "gater");
 		createPropAction(animationStationRemote, R.id.button3, "question");
-		createPropAction(animationStationRemote, R.id.button4, "spider");
+		createPropAction(animationStationRemote, R.id.button4, "pillar");
 		createPropAction(animationStationRemote, R.id.button5, "snake");
 		//createPropAction(foggerRemote, R.id.fog_button, "fog");
 		//createPropAction(foggerRemote, R.id.more_button, "duty_up");
